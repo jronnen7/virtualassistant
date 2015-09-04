@@ -7,3 +7,6 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2015-09-03 19:46:39.310
 !MESSAGE Failed to load properties file for project 'VirtualAssistant'
+
+!ENTRY org.eclipse.ui 4 4 2015-09-03 20:26:08.568
+!MESSAGE Invalid preference page path: XML Syntax
