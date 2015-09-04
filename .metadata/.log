@@ -1,0 +1,9 @@
+!SESSION 2015-09-03 19:42:15.340 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2015-09-03 19:46:39.310
+!MESSAGE Failed to load properties file for project 'VirtualAssistant'
