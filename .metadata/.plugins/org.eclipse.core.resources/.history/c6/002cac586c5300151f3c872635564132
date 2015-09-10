@@ -1,0 +1,45 @@
+package com.goozmo.virtualassistant;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
+
+import android.util.Base64;
+
+public class PostClient  {
+
+	
+	public PostClient(String apiKey, String message) {
+
+//		http.sendGet();
+		
+		sendPost(apiKey,);
+
+	}
+	
+	// HTTP POST request
+	private void sendPost(String postData) throws Exception {
+	    URL url = new URL("http://www.java2s.com");
+	    URLConnection conn = url.openConnection();
+	    conn.setDoOutput(true);
+	    OutputStreamWriter writer = new OutputStreamWriter(conn.getOutputStream());
+
+	    writer.write("value=1&anotherValue=1");
+	    writer.flush();
+	    String line;
+	    BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+	    while ((line = reader.readLine()) != null) {
+	      System.out.println(line);
+	    }
+	    writer.close();
+	    reader.close();
+		}
+
+	}
+
+}

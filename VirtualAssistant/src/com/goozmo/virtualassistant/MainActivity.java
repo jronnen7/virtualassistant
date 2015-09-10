@@ -4,6 +4,7 @@ import com.goozmo.virtualassistant.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -112,6 +113,11 @@ public class MainActivity extends Activity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        
+        String jaredAccessTocken = new String("VI0yiNckBBGurUoEk6UuEYb9DXJig75l");
+        Intent myIntent = new Intent(MainActivity.this, PostClient.class);
+        myIntent.putExtra("key", jaredAccessTocken); //Optional parameters
+        startActivity(myIntent);
     }
 
     @Override
