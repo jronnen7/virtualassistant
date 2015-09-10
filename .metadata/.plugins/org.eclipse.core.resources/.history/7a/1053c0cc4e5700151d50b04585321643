@@ -1,0 +1,10 @@
+package com.goozmo.virtualassistant;
+
+import android.widget.ArrayAdapter;
+
+public class Team {
+
+	private ArrayList<TeamMember> gooTeamMembers;
+    private ArrayAdapter<TeamMember> gooTeamAdapter;
+    
+}
