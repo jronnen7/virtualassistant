@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 asm_directive=181,137,0
 asm_label=131,148,150
 c_braces=220,50,47
@@ -53,6 +54,9 @@ semanticHighlighting.typeParameter.color=181,137,0
 semanticHighlighting.typeParameter.enabled=true
 semanticHighlighting.typedef.color=103,140,177
 semanticHighlighting.typedef.enabled=true
+=======
+eclipse.preferences.version=1
+>>>>>>> 448fccff6988e374c92911068337a07b40a45fff
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 AbstractTextEditor.Color.Background=0,43,54
 AbstractTextEditor.Color.Background.SystemDefault=false
 AbstractTextEditor.Color.FindScope=224,226,228
@@ -20,3 +21,7 @@ overviewRuler_migration=migrated_3.1
 printMarginColor=101,123,131
 searchResultIndicationColor=7,54,66
 writeOccurrenceIndicationColor=7,54,66
+=======
+eclipse.preferences.version=1
+overviewRuler_migration=migrated_3.1
+>>>>>>> 448fccff6988e374c92911068337a07b40a45fff

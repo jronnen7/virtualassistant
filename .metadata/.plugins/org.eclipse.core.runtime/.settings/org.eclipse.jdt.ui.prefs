@@ -4,6 +4,7 @@ content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=60,60,60
 eclipse.preferences.version=1
 fontPropagated=true
+<<<<<<< HEAD
 java_bracket=220,50,47
 java_comment_task_tag=211,54,130
 java_default=131,148,150
@@ -17,6 +18,8 @@ java_multi_line_comment=88,110,117
 java_operator=181,137,0
 java_single_line_comment=88,110,117
 java_string=42,161,152
+=======
+>>>>>>> 448fccff6988e374c92911068337a07b40a45fff
 org.eclipse.jdt.internal.ui.navigator.layout=2
 org.eclipse.jdt.ui.editor.tab.width=
 org.eclipse.jdt.ui.formatterprofiles.version=12

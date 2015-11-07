@@ -12,7 +12,11 @@
 		<link>
 			<name>.link0</name>
 			<type>2</type>
+<<<<<<< HEAD
+			<location>/home/jared/bin/android-sdk-linux/sources/android-17</location>
+=======
 			<location>/home/jared/android-sdk-linux/sources/android-17</location>
+>>>>>>> 6ce4679b021d87ddede333a7ca911f1785d0f806
 		</link>
 	</linkedResources>
 </projectDescription>

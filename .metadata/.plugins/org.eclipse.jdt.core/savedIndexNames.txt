@@ -1,3 +1,17 @@
 INDEX VERSION 1.126+/home/jared/GitHub/VirtualAssistant/.metadata/.plugins/org.eclipse.jdt.core
+<<<<<<< HEAD
 3709524700.index
+=======
+3366573038.index
+=======
+<<<<<<< HEAD
+1333727604.index
+2255885648.index
+2519448008.index
+>>>>>>> 448fccff6988e374c92911068337a07b40a45fff
 3535176730.index
+3310014915.index
+855610831.index
+1940319400.index
+>>>>>>> 6ce4679b021d87ddede333a7ca911f1785d0f806
+3205485402.index

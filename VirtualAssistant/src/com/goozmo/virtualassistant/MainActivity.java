@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
         findViewById(R.id.home_screen_button1).setOnClickListener(buttonListener);
         findViewById(R.id.home_screen_button2).setOnClickListener(buttonListener);
         findViewById(R.id.home_screen_button3).setOnClickListener(buttonListener);
+
     }
 
    private void promptSpeechInput() {
