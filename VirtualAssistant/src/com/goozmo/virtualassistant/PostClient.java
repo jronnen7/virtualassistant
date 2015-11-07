@@ -23,8 +23,7 @@ public class PostClient {
 	
 	// HTTP POST request
 	private void sendPost(String postData) throws Exception {
-		String url = "http://central.tipflip.co";
-		URL obj = new URL(url);
+		
 
 	}
 

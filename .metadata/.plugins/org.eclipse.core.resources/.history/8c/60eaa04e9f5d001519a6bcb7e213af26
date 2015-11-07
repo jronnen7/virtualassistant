@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VirtualAssistant</string>
+    <string name="dummy_content">GOOZMO\nContent</string>
+    <string name="dummy_button">Dummy Button</string>
+	<string name="delivery_button">Here for A Delivery</string>
+</resources>

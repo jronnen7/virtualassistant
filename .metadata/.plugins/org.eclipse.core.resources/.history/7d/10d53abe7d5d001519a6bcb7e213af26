@@ -1,0 +1,10 @@
+package com.goozmo.virtualassistant;
+
+public class TeamMember {
+	private final String name;
+	private final String apiKey;
+	TeamMember(String name, String apiKey) {
+		this.name = name;
+		this.apiKey = apiKey;
+	}
+}

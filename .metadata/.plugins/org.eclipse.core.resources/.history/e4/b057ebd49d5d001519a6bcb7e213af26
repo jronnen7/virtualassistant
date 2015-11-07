@@ -1,0 +1,18 @@
+package com.goozmo.virtualassistant;
+
+import android.app.Activity;
+
+// This class is responsible for talking
+public class Speaker {
+	
+	public boolean WelcomeMessage() {
+		boolean ret = false;
+		return ret;
+	}
+	
+	public boolean PleaseWaitMessage() {
+		boolean ret = false;
+		return ret;
+	}
+	
+}

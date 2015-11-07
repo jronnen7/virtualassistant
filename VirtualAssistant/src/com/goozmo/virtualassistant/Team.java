@@ -18,6 +18,12 @@ public class Team {
     	gooTeamAdapter.notify();
     }
     
+    public void MessageAll(String msg) {
+    	for(int i=0;i<gooTeamMembers.size(); i++){
+    		Message(gooTeamMembers.get(i), msg);
+    	}
+    }
+    
     public void Message(TeamMember t, String msg) {
     	Message(t,msg,new String("General Request"));
     }
