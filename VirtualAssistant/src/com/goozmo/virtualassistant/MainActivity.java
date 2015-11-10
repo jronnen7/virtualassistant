@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 
     private SystemUiHider mSystemUiHider;
     private TextView txtSpeechInput;
+    private Speaker speaker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +97,10 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			if(v.getId() == R.id.home_screen_button1) {
-				/* TODO */
+				speaker = new Speaker(MainActivity.this);
+				speaker.WelcomeMessage();
+				speaker.Destroy();
+				speaker = null;
 			} else if(v.getId() == R.id.home_screen_button2) {
 				promptSpeechInput();
 			} else if(v.getId() == R.id.home_screen_button3) {
@@ -104,6 +108,7 @@ public class MainActivity extends Activity {
 			}
 			
 		}
+
 
     	
     }
