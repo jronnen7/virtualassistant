@@ -1,4 +1,4 @@
-package com.goozmo.virtualassistant;
+package com.goozmo.virtualassistant.util;
 
 import java.util.HashMap;
 import java.util.Locale;

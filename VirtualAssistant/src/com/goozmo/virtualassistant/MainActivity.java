@@ -3,7 +3,9 @@ package com.goozmo.virtualassistant;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import com.goozmo.virtualassistant.util.Emailer;
 import com.goozmo.virtualassistant.util.SMS;
+import com.goozmo.virtualassistant.util.Speaker;
 import com.goozmo.virtualassistant.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -34,6 +36,7 @@ public class MainActivity extends Activity {
 
     private TextView txtSpeechInput;
     private Speaker speaker;
+    private Emailer emailer;
     private SMS sms;
     
     ArrayList<String> mResponseText;
@@ -47,6 +50,7 @@ public class MainActivity extends Activity {
       
         speaker = new Speaker(this);
         sms = new SMS(this);
+        emailer = new Emailer(this);
         
         txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
         GooButtonListener buttonListener = new GooButtonListener();
@@ -92,7 +96,13 @@ public class MainActivity extends Activity {
             	   speaker.Speak("I think you said " + 
             			   mResponseText.get(0) +", but I am just a robot. Let me text my owner");
        				sms.sendSms("3209054092", mResponseText.get(0));  
+       				String emailStr = new String("Virtual Assistant - <br>");
+       				for(int i=0;i<mResponseText.size();i++) {
+       					emailStr += mResponseText.get(i) + "<br>";
+       				}
+       				emailer.sendEmail(emailStr);
                }
+               finish();
            }
            break;
        }
