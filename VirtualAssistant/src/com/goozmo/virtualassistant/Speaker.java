@@ -42,7 +42,7 @@ public class Speaker implements OnInitListener {
 	}
 	
 	public void PleaseWaitMessage() {
-		Speak("Welcome to Goozmo! How can we help you today?");
+		Speak("Please wait, someone will be with you shortly.");
 	}
 	
 	public void Speak(String string) {

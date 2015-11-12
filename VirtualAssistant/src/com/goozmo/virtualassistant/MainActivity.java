@@ -3,6 +3,7 @@ package com.goozmo.virtualassistant;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import com.goozmo.virtualassistant.util.SMS;
 import com.goozmo.virtualassistant.util.SystemUiHider;
 
 import android.annotation.TargetApi;
@@ -31,9 +32,12 @@ public class MainActivity extends Activity {
 	
 	private final int REQ_CODE_SPEECH_INPUT = 100;	
 
-    private SystemUiHider mSystemUiHider;
     private TextView txtSpeechInput;
     private Speaker speaker;
+    private SMS sms;
+    
+    ArrayList<String> mResponseText;
+    private boolean mTextOwner; // if set to true text owner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +45,18 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
       
-
+        speaker = new Speaker(this);
+        sms = new SMS(this);
+        
         txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
         GooButtonListener buttonListener = new GooButtonListener();
         
-        findViewById(R.id.home_screen_button1).setOnClickListener(buttonListener);
-        findViewById(R.id.home_screen_button2).setOnClickListener(buttonListener);
-        findViewById(R.id.home_screen_button3).setOnClickListener(buttonListener);
+        findViewById(R.id.home_screen_button1).setOnClickListener(
+        		buttonListener);
+        findViewById(R.id.home_screen_button2).setOnClickListener(
+        		buttonListener);
+        findViewById(R.id.home_screen_button3).setOnClickListener(
+        		buttonListener);
 
     }
 
@@ -66,10 +75,6 @@ public class MainActivity extends Activity {
                     Toast.LENGTH_SHORT).show();
         }
     }
-   private void playSound() {
-	   final MediaPlayer mp = MediaPlayer.create(this, R.raw.welcomemessage);
-	   mp.start();
-   }
    
    @Override
    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -79,9 +84,15 @@ public class MainActivity extends Activity {
        case REQ_CODE_SPEECH_INPUT: {
            if (resultCode == RESULT_OK && null != data) {
 
-               ArrayList<String> result = data
-                       .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-               txtSpeechInput.setText(result.get(0));
+        	   mResponseText = data.getStringArrayListExtra(
+        			   RecognizerIntent.EXTRA_RESULTS);
+               txtSpeechInput.setText(mResponseText.get(0));
+     
+               if(mTextOwner) {
+            	   speaker.Speak("I think you said " + 
+            			   mResponseText.get(0) +", but I am just a robot. Let me text my owner");
+       				sms.sendSms("3209054092", mResponseText.get(0));  
+               }
            }
            break;
        }
@@ -97,19 +108,14 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			if(v.getId() == R.id.home_screen_button1) {
-				speaker = new Speaker(MainActivity.this);
 				speaker.WelcomeMessage();
-				speaker.Destroy();
-				speaker = null;
 			} else if(v.getId() == R.id.home_screen_button2) {
+				mTextOwner = false;
 				promptSpeechInput();
 			} else if(v.getId() == R.id.home_screen_button3) {
-				playSound();
+				mTextOwner = true;
+				promptSpeechInput();
 			}
-			
-		}
-
-
-    	
+		}	
     }
 }
