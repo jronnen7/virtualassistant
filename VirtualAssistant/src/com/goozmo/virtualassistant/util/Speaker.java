@@ -29,7 +29,7 @@ public class Speaker implements OnInitListener {
     @Override
     public void onInit(int status) {
         if(status == TextToSpeech.SUCCESS){
-            tts.setLanguage(Locale.US);
+            tts.setLanguage(Locale.UK);
             ready = true;
         }
         else{

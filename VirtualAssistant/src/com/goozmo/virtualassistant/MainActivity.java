@@ -21,6 +21,7 @@ import android.speech.RecognizerIntent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,13 +56,12 @@ public class MainActivity extends Activity {
         txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
         GooButtonListener buttonListener = new GooButtonListener();
         
-        findViewById(R.id.home_screen_button1).setOnClickListener(
-        		buttonListener);
-        findViewById(R.id.home_screen_button2).setOnClickListener(
-        		buttonListener);
-        findViewById(R.id.home_screen_button3).setOnClickListener(
-        		buttonListener);
-
+        Button home_screen_button1 = (Button) findViewById(R.id.home_screen_button1);
+        Button home_screen_button2 = (Button) findViewById(R.id.home_screen_button2);
+        Button home_screen_button3 = (Button) findViewById(R.id.home_screen_button3);
+        home_screen_button1.setOnClickListener(buttonListener);
+        home_screen_button2.setOnClickListener(buttonListener);
+        home_screen_button3.setOnClickListener(buttonListener);
     }
 
    private void promptSpeechInput() {
@@ -102,7 +102,6 @@ public class MainActivity extends Activity {
        				}
        				emailer.sendEmail(emailStr);
                }
-               finish();
            }
            break;
        }
